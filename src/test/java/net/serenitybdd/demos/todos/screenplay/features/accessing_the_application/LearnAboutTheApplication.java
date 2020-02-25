@@ -22,9 +22,6 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.core.Is.is;
 
-/**
- * This example illustrates using Serenity Steps with JUnit.
- */
 @RunWith(SerenityRunner.class)
 @WithTags({
         @WithTag("Screenplay pattern"),

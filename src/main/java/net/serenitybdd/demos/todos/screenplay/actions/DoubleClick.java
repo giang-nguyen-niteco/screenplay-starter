@@ -1,7 +1,7 @@
 package net.serenitybdd.demos.todos.screenplay.actions;
 
-import net.serenitybdd.screenplay.Action;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
@@ -13,7 +13,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 /**
  * Custom Action using a low-level WebDriver API
  */
-public class DoubleClick implements Action {
+public class DoubleClick implements Interaction {
 
     public static DoubleClick on(Target target) {
         return instrumented(DoubleClick.class, target);

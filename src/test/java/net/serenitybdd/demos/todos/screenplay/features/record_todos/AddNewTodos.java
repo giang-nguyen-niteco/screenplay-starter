@@ -1,6 +1,5 @@
 package net.serenitybdd.demos.todos.screenplay.features.record_todos;
 
-import cucumber.api.java.en_old.Ac;
 import net.serenitybdd.demos.todos.screenplay.questions.TheItems;
 import net.serenitybdd.demos.todos.screenplay.tasks.AddATodoItem;
 import net.serenitybdd.demos.todos.screenplay.tasks.Start;
@@ -30,8 +29,11 @@ import static org.hamcrest.Matchers.hasItems;
 public class AddNewTodos {
 
     private Actor james = Actor.named("James");
-    @Managed private WebDriver hisBrowser;
-    @Before public void jamesCanBrowseTheWeb() {
+    @Managed
+    private WebDriver hisBrowser;
+
+    @Before
+    public void jamesCanBrowseTheWeb() {
         james.can(BrowseTheWeb.with(hisBrowser));
     }
 
@@ -53,6 +55,6 @@ public class AddNewTodos {
         when(james).attemptsTo(AddATodoItem.called("Buy some milk"));
 
         then(james).should(seeThat(TheItems.displayed(),
-                                   hasItems("Walk the dog", "Put out the garbage", "Buy some milk")));
+                hasItems("Walk the dog", "Put out the garbage", "Buy some milk")));
     }
 }
