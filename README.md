@@ -9,19 +9,6 @@ The web tests you'll find here run against the http://todomvc.com/examples/angul
 by feature in packages under `src/test/java/net/serenitybdd/demos/todos/<pattern name>/features`.
 
 By default the tests run on Chrome, so make sure you have the latest chromedriver instance on your system path.
-## PageObjects implementation
-
-These tests use pages and steps defined in `src/main/java/net/serenitybdd/demos/todos/pageobjects`.
-
-The overall project structure is shown below:
-````
-+ model
-    Domain model classes
-+ pages
-    PageObjects
-+ steps
-    Tasks and assertions performed by the "user"
-````
 
 ## Screenplay implementation
 
@@ -45,15 +32,6 @@ The overall project structure is shown below:
 
 To run the project you'll need JDK 1.8 and Maven installed.
 
-### Screenplay and Cucumber
-
-The first demo shows the integration of Serenity BDD, Screenplay and Cucumber JVM.
-To run it, execute:
-
-```
-mvn clean verify -Pcucumber
-```
-
 ### Screenplay and JUnit
 
 The second demo covers the integration of Serenity BDD, Screenplay and JUnit.
@@ -62,17 +40,6 @@ To run it, execute:
 
 ```
 mvn clean verify -Pscreenplay
-```
-
-### Page Objects and JUnit
-
-We've also included a demo of how the tests you've just seen implemented using the Screenplay Pattern
-would have looked if they were implemented using the Page Objects.
-
-To run it, execute:
-
-```
-mvn clean verify -Ppageobjects
 ```
 
 ## Reporting
